@@ -13,6 +13,19 @@
     --transition: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+/* LIGHT MODE VARIABLES */
+body.light-mode {
+    --bg-color: #f5f5f5;
+    --text-color: #121212;
+    --accent-color: #1A73E8;
+    /* Slightly deeper blue for light mode */
+    --accent-secondary: #0077cc;
+    --grid-line: rgba(0, 0, 0, 0.08);
+    /* Darker grid for light mode */
+    --card-bg: #ffffff;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -55,17 +68,45 @@ body {
     background: var(--bg-color);
     z-index: 9999;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: transform 0.8s var(--transition);
+    transition: transform 1s cubic-bezier(1, 0, 0, 1);
+    /* Extreme ease for premium feel */
+}
+
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 .loader-text {
     font-family: var(--font-heading);
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    animation: blink 1s infinite;
+    letter-spacing: 0.5rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.loader-bar {
+    width: 200px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.loader-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--accent-color);
+    transition: width 1.5s ease;
 }
 
 /* TYPOGRAPHY */
@@ -104,6 +145,12 @@ nav.active {
     mix-blend-mode: normal;
 }
 
+body.light-mode nav {
+    mix-blend-mode: normal;
+    background: linear-gradient(to bottom, var(--bg-color) 59%, #f5f5f5 50%, transparent 100%);
+}
+
+
 .logo {
     font-family: var(--font-heading);
     font-size: 1.5rem;
@@ -118,6 +165,11 @@ nav.active {
     margin-right: 10px;
     width: auto;
     display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
 }
 
 .nav-links a {
@@ -145,6 +197,111 @@ nav.active {
 .nav-links a:hover::after {
     width: 100%;
 }
+
+/* Theme Toggle Styling */
+.theme-toggle {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-left: 2rem;
+    padding: 0;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(15deg);
+}
+
+.theme-toggle .fa-sun {
+    display: none;
+}
+
+body.light-mode .theme-toggle .fa-moon {
+    display: none;
+}
+
+body.light-mode .theme-toggle .fa-sun {
+    display: block;
+    color: #f57c00;
+}
+
+body.light-mode .theme-toggle:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .nav-logo {
+    filter: invert(1);
+}
+
+body.light-mode .edu-logo {
+    filter: brightness(0);
+}
+
+body.light-mode .loader-bar {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .hero-subtitle,
+body.light-mode .about-text p,
+body.light-mode .card-year,
+body.light-mode .tool-name,
+body.light-mode .edu-list {
+    color: #444;
+}
+
+body.light-mode .tool-card:hover .tool-name {
+    color: #111;
+}
+
+body.light-mode .nav-links a,
+body.light-mode .theme-toggle {
+    color: #111;
+}
+
+
+body.light-mode .bar {
+    background-color: #111;
+}
+
+body.light-mode .nav-links a::after {
+    background: #111;
+}
+
+body.light-mode .loader {
+    background: #f5f5f5;
+}
+
+body.light-mode .loader-text {
+    color: #111;
+}
+
+body.light-mode .card-title {
+    color: #111;
+}
+
+body.light-mode .tool-icon-wrapper {
+    color: #111;
+}
+
+body.light-mode .adobe-icon-white {
+    border-color: #111;
+    color: #111;
+}
+
+body.light-mode .tool-img-white {
+    filter: invert(1);
+}
+
 
 /* Menu Toggle Styling */
 .menu-toggle {
@@ -305,6 +462,29 @@ nav.active {
     letter-spacing: 1px;
 }
 
+/* EDUCATION LIST */
+.edu-list {
+    list-style: none;
+    color: #888;
+}
+
+.edu-list li {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--grid-line);
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.edu-title {
+    color: var(--text-color);
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+
 /* PROJECTS SECTION */
 .projects {
     padding: 5rem 5vw;
@@ -359,7 +539,7 @@ nav.active {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--grid-line);
     padding-top: 1.5rem;
     transition: all 0.3s ease;
 }
@@ -400,14 +580,7 @@ nav.active {
     color: var(--accent-color);
 }
 
-/* Edit Mode indicators for cards */
-body.admin-logged-in .project-card {
-    cursor: pointer;
-    border: 1px dashed rgba(41, 121, 255, 0.3);
-    padding: 10px;
-    margin: -10px;
-    border-radius: 12px;
-}
+
 
 .card-category {
     font-size: 0.8rem;
@@ -611,7 +784,7 @@ footer {
     justify-content: center;
     gap: 10px;
     transition: all 0.3s ease;
-    border: 1px solid #333;
+    border: 1px solid var(--grid-line);
     padding: 10px 20px;
     border-radius: 4px;
     width: 100%;
@@ -713,7 +886,8 @@ footer {
         right: -100%;
         width: 100%;
         height: 100vh;
-        background: rgba(0, 0, 0, 0.98);
+        background: var(--bg-color);
+        opacity: 0.98;
         /* Solid dark fade */
         backdrop-filter: blur(15px);
         display: flex;
@@ -726,24 +900,30 @@ footer {
 
     .nav-links.active {
         right: 0;
+        display: flex;
     }
 
     .nav-links a,
-    #admin-lock {
+    .theme-toggle {
         margin: 1.5rem 0 !important;
-        /* Centered margin for all */
         font-size: 1.5rem;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         left: 0;
-        /* Reset any left positioning */
     }
 
-    #admin-lock {
-        margin-left: 0 !important;
-        font-size: 1.2rem;
-        opacity: 0.5;
+
+    .theme-toggle {
+        margin-left: 0;
+        width: 50px;
+        height: 50px;
     }
+
+
+
+
 
     /* Hamburger Animation */
     .menu-toggle.active .bar:nth-child(2) {
@@ -914,72 +1094,66 @@ footer {
     border-radius: 5px;
 }
 
-#add-project-btn {
-    background: var(--accent-color);
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    font-family: var(--font-body);
-    font-weight: bold;
-    display: none;
-    /* Only visible when logged in */
-    align-items: center;
-    gap: 10px;
-}
 
-/* ADMIN TOOLBAR */
-#admin-toolbar {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #111;
-    border: 1px solid #333;
-    padding: 10px;
-    border-radius: 8px;
+
+/* PDF VIEWER MODAL */
+.modal-content.pdf-view {
+    max-width: 95%;
+    width: 1200px;
+    height: 90vh;
+    padding: 1.5rem;
     display: flex;
-    gap: 10px;
-    z-index: 9999;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    transform: translateY(100px);
-    transition: transform 0.3s ease;
+    flex-direction: column;
 }
 
-body.admin-logged-in #admin-toolbar {
-    transform: translateY(0);
+.pdf-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #333;
 }
 
-.admin-btn {
-    background: #333;
+.pdf-modal-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+}
+
+.pdf-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.close-pdf-modal {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #888;
+    line-height: 1;
+    transition: color 0.3s;
+}
+
+.close-pdf-modal:hover {
     color: #fff;
+}
+
+#pdf-frame {
+    width: 100%;
+    flex: 1;
     border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    font-family: var(--font-body);
-    font-size: 0.9rem;
+    background: #fff;
     border-radius: 4px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: background 0.3s;
 }
 
-.admin-btn:hover {
-    background: #444;
-}
-
-.admin-btn.primary {
-    background: var(--accent-color);
-}
-
-.admin-btn.primary:hover {
-    background: #b71c1c;
-}
-
-.admin-btn.danger {
-    background: #f44336;
-}
-
-.admin-btn.danger:hover {
-    background: #d32f2f;
+@media (max-width: 768px) {
+    .modal-content.pdf-view {
+        width: 100%;
+        height: 100vh;
+        max-width: 100%;
+        border-radius: 0;
+        border: none;
+    }
 }

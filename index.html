@@ -18,14 +18,19 @@
     <link rel="icon" type="image/png" href="assets/images/logo-fundo-escuro.png">
 </head>
 
-<body class="">
+<body>
 
     <!-- Grid Background -->
     <div class="grid-bg"></div>
 
     <!-- Loader -->
-    <div class="loader" style="transform: translateY(-100%);">
-        <div class="loader-text">MP // 2026</div>
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-text">MP // 2026</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
     </div>
 
     <!-- Navigation -->
@@ -44,81 +49,75 @@
             <a href="#projects">Projetos</a>
             <a href="#tools">Ferramentas</a>
             <a href="#contact">Contato</a>
-            <a href="#" id="admin-lock" title="Admin Login"><i class="fas fa-lock"></i></a>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-tag animate-up editable in-view" data-key="hero-tag" contenteditable="false">Design Gráfico
-            &amp; Estratégia Industrial</div>
-        <h1 class="hero-title animate-up editable in-view" data-key="hero-title" style="transition-delay: 0.1s;"
-            contenteditable="false">DESIGN<br>DE
+        <div class="hero-tag animate-up editable" data-key="hero-tag">Design Gráfico aliado à RIGOR TÉCNICO</div>
+        <h1 class="hero-title animate-up editable" data-key="hero-title" style="transition-delay: 0.1s;">DESIGN<br>DE
             VIABILIDADE</h1>
-        <p class="hero-subtitle animate-up editable in-view" data-key="hero-subtitle" style="transition-delay: 0.2s;"
-            contenteditable="false">
+        <p class="hero-subtitle animate-up editable" data-key="hero-subtitle" style="transition-delay: 0.2s;">
             Transformando conceitos em soluções visuais
-            viáveis, da estética à linha de produção.</p>
+            viáveis, da estética ao produto final</p>
     </section>
 
     <!-- Skills Marquee -->
-    <div class="skills-marquee animate-up in-view">
-        <div class="marquee-content editable" data-key="skills-marquee" contenteditable="false">
-            <span class="marquee-item">Design Estratégico + Inteligência Artificial + Branding Industrial + Power BI +
-                Cibersegurança + Design Thinking +&nbsp;</span><span class="marquee-item">Design Estratégico +
-                Inteligência
-                Artificial + Branding Industrial + Power BI +
-                Cibersegurança + Design Thinking +</span>
+    <div class="skills-marquee animate-up">
+        <div class="marquee-content editable" data-key="skills-marquee">
+            <span class="marquee-item">DESIGN THINKING + DESIGN DE VIABILIDADE + BRANDING E PRODUTO + IDENTIDADE VISUAL
+                +
+                DESIGN DE EMBALAGENS + PROTOTIPAGEM + INTELIGÊNCIA ARTIFICIAL + DESIGN UNIVERSAL +&nbsp;</span><span
+                class="marquee-item">DESIGN THINKING + DESIGN DE VIABILIDADE + BRANDING E PRODUTO + IDENTIDADE VISUAL +
+                DESIGN DE EMBALAGENS + PROTOTIPAGEM + INTELIGÊNCIA ARTIFICIAL + DESIGN UNIVERSAL +</span>
         </div>
     </div>
 
     <!-- About Section -->
     <section id="about" class="about">
-        <div class="about-image animate-up in-view">
+        <div class="about-image animate-up">
             <img src="assets/images/foto de mateus.jpeg" alt="Mateus Penteado" loading="lazy">
         </div>
-        <div class="about-text animate-up in-view">
-            <h2 class="section-title editable" data-key="about-title" contenteditable="false">PERFIL</h2>
-            <div class="editable-content editable" data-key="about-bio" contenteditable="false">
-                <p>Sou Tecnólogo em Design Gráfico pela UNINTER e possuo formação técnica em Mecânica de Automóveis
-                    Leves
-                    pelo SENAI/Raízen. Minha atuação foca na intersecção entre design e indústria, projetando
-                    identidades e
-                    embalagens tecnicamente exequíveis.</p>
-                <p>Integro Design Thinking, Inteligência Artificial&nbsp;e análise de processos para garantir eficiência
-                    e
-                    resultados. Diferenciais incluem domínio de IA generativa, Big Data e inglês avançado (C1/C2).</p>
+        <div class="about-text animate-up">
+            <h2 class="section-title editable" data-key="about-title">PERFIL</h2>
+            <div class="editable-content editable" data-key="about-bio">
+                <p>Sou Tecnólogo em Design Gráfico pela UNINTER, com formação em Mecânica Industrial pelo SENAI. Uno
+                    rigor produtivo à estratégia criativa, transformando problemas complexos em identidades visuais e
+                    embalagens que equilibram estética, funcionalidade e viabilidade técnica.</p>
+                <p>Acredito no design guiado por lógica, organização e Design Thinking. Com inglês avançado (C1/C2) e IA
+                    generativa no fluxo de trabalho, entrego soluções completas — da concepção ao produto final.</p>
             </div>
 
             <div class="stats-grid">
                 <div class="stat-item">
-                    <h3 class="editable" data-key="stat-1-val" contenteditable="false">2025</h3>
-                    <p class="editable" data-key="stat-1-desc" contenteditable="false">Formação Técnica &amp; Superior
-                    </p>
+                    <h3 class="editable" data-key="stat-1-val">2025</h3>
+                    <p class="editable" data-key="stat-1-desc">CONCLUSÃO SIMULTÂNEA</p>
                 </div>
                 <div class="stat-item">
-                    <h3 class="editable" data-key="stat-2-val" contenteditable="false">C1/C2</h3>
-                    <p class="editable" data-key="stat-2-desc" contenteditable="false">Proficiência em Inglês</p>
+                    <h3 class="editable" data-key="stat-2-val">C1/C2</h3>
+                    <p class="editable" data-key="stat-2-desc">Proficiência em Inglês</p>
                 </div>
             </div>
         </div>
-        <div class="education-list animate-up in-view" style="transition-delay: 0.2s;">
+        <div class="education-list animate-up" style="transition-delay: 0.2s;">
             <h3 style="margin-bottom: 2rem; color: var(--accent-color);">FORMAÇÃO ACADÊMICA</h3>
-            <ul style="list-style: none; color: #888;">
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #333; padding-bottom: 1rem; display: flex; align-items: center; gap: 1.5rem;"
-                    class="editable" data-key="edu-1">
+            <ul class="edu-list">
+                <li class="editable" data-key="edu-1">
                     <img src="assets/images/logo-uninter.png" alt="UNINTER" class="edu-logo">
                     <div>
-                        <strong style="color: white; display: block; font-size: 1.2rem;">Design Gráfico</strong>
-                        UNINTER (2025)
+                        <strong class="edu-title">Design Gráfico</strong>
+                        TECNÓLOGO / UNINTER (2025)
                     </div>
                 </li>
-                <li style="margin-bottom: 2rem; border-bottom: 1px solid #333; padding-bottom: 1rem; display: flex; align-items: center; gap: 1.5rem;"
-                    class="editable" data-key="edu-2">
+                <li class="editable" data-key="edu-2">
                     <img src="assets/images/logo-senai.png" alt="SENAI" class="edu-logo">
                     <div>
-                        <strong style="color: white; display: block; font-size: 1.2rem;">Mecânica Automotiva</strong>
-                        SENAI/Raízen (2025)
+                        <strong class="edu-title">Mecânica Industrial</strong>
+                        C.A.I / SENAI (2025)
                     </div>
                 </li>
             </ul>
@@ -126,45 +125,42 @@
     </section>
     <!-- Projects Section -->
     <section id="projects" class="projects">
-        <h2 class="section-title animate-up editable in-view" data-key="projects-title" contenteditable="false">PROJETOS
-        </h2>
+        <h2 class="section-title animate-up editable" data-key="projects-title">PROJETOS</h2>
         <div class="project-gallery" id="project-gallery">
             <!-- Project 1 -->
-            <a href="assets/faculdade/desenho-observacao/observ.pdf" target="_blank"
-                class="project-card animate-up in-view">
+            <a href="assets/faculdade/desenho-observacao/observ.pdf" target="_blank" class="project-card animate-up">
                 <div class="card-image-wrapper">
                     <img src="assets/faculdade/desenho-observacao/observ.png" alt="Xícara e Caixa">
                 </div>
                 <div class="card-content">
                     <div class="card-header">
-                        <span class="card-category">OBSERVATIONAL DRAWING</span>
+                        <span class="card-category">ESTUDO DE FORMA E TÉCNICA</span>
                         <span class="card-year">2023</span>
                     </div>
-                    <h3 class="card-title">CAIXA E XÍCARA</h3>
+                    <h3 class="card-title">OBSERVAÇÃO</h3>
                 </div>
             </a>
             <!-- Project 2 -->
-            <a href="assets/faculdade/app-arca/arca.pdf" target="_blank" class="project-card animate-up in-view">
+            <a href="assets/faculdade/app-arca/arca.pdf" target="_blank" class="project-card animate-up">
                 <div class="card-image-wrapper">
                     <img src="assets/faculdade/app-arca/arca.png" alt="App Arca">
                 </div>
                 <div class="card-content">
                     <div class="card-header">
-                        <span class="card-category">UX/UI &amp; APP DESIGN</span>
+                        <span class="card-category">UX/UI E PROTOTIPAGEM</span>
                         <span class="card-year">2025</span>
                     </div>
                     <h3 class="card-title">APP ARCA</h3>
                 </div>
             </a>
             <!-- Project 3 -->
-            <a href="assets/faculdade/embalagem-pitanga/pitanga.pdf" target="_blank"
-                class="project-card animate-up in-view">
+            <a href="assets/faculdade/embalagem-pitanga/pitanga.pdf" target="_blank" class="project-card animate-up">
                 <div class="card-image-wrapper">
                     <img src="assets/faculdade/embalagem-pitanga/pitanga.png" alt="Suco de Pitanga">
                 </div>
                 <div class="card-content">
                     <div class="card-header">
-                        <span class="card-category">PACKAGING</span>
+                        <span class="card-category">EMBALAGEM E VIABILIDADE</span>
                         <span class="card-year">2025</span>
                     </div>
                     <h3 class="card-title">SUCO DE PITANGA</h3>
@@ -172,13 +168,13 @@
             </a>
             <!-- Project 4 -->
             <a href="assets/faculdade/art-direction-tubetes/tubetes.pdf" target="_blank"
-                class="project-card animate-up in-view">
+                class="project-card animate-up">
                 <div class="card-image-wrapper">
                     <img src="assets/faculdade/art-direction-tubetes/tubetes.png" alt="Tubetes">
                 </div>
                 <div class="card-content">
                     <div class="card-header">
-                        <span class="card-category">ART DIRECTION</span>
+                        <span class="card-category">DIREÇÃO DE ARTE</span>
                         <span class="card-year">2025</span>
                     </div>
                     <h3 class="card-title">TUBETES</h3>
@@ -186,40 +182,39 @@
             </a>
             <!-- Project 5 -->
             <a href="assets/faculdade/identidade-corporativa-velas-ocean/velas-ocean.pdf" target="_blank"
-                class="project-card animate-up in-view">
+                class="project-card animate-up">
                 <div class="card-image-wrapper">
                     <img src="assets/faculdade/identidade-corporativa-velas-ocean/velas-sacola.png" alt="Velas Ocean">
                 </div>
                 <div class="card-content">
                     <div class="card-header">
-                        <span class="card-category">BRAND IDENTITY</span>
+                        <span class="card-category">IDENTIDADE VISUAL E BRANDING</span>
                         <span class="card-year">2025</span>
                     </div>
                     <h3 class="card-title">VELAS OCEAN</h3>
                 </div>
             </a>
             <!-- Project 6 -->
-            <a href="assets/faculdade/id-visual-propria/id-topete.pdf" target="_blank"
-                class="project-card animate-up in-view">
+            <a href="assets/faculdade/id-visual-propria/id-topete.pdf" target="_blank" class="project-card animate-up">
                 <div class="card-image-wrapper">
                     <img src="assets/faculdade/id-visual-propria/id-topete.png" alt="Identidade Própria">
                 </div>
                 <div class="card-content">
                     <div class="card-header">
-                        <span class="card-category">PERSONAL BRANDING</span>
+                        <span class="card-category">MARCA PESSOAL</span>
                         <span class="card-year">2025</span>
                     </div>
                     <h3 class="card-title">STUDIO TOPÈTE</h3>
                 </div>
             </a>
-            <!-- Project 2 -->
-            <a href="assets/faculdade/id-visual-vans/vans.pdf" target="_blank" class="project-card animate-up in-view">
+            <!-- Project 7 -->
+            <a href="assets/faculdade/id-visual-vans/vans.pdf" target="_blank" class="project-card animate-up">
                 <div class="card-image-wrapper">
                     <img src="assets/faculdade/id-visual-vans/vans.png" alt="Vans">
                 </div>
                 <div class="card-content">
                     <div class="card-header">
-                        <span class="card-category">REBRANDING STUDY</span>
+                        <span class="card-category">BRANDING E ESTRATÉGIA VISUAL</span>
                         <span class="card-year">2024</span>
                     </div>
                     <h3 class="card-title">VANS REDESIGN</h3>
@@ -227,13 +222,13 @@
             </a>
             <!-- Project 8 -->
             <a href="assets/faculdade/pequeno-principe/pequeno-principe.pdf" target="_blank"
-                class="project-card animate-up in-view">
+                class="project-card animate-up">
                 <div class="card-image-wrapper">
                     <img src="assets/faculdade/pequeno-principe/pequeno-principe.png" alt="O Pequeno Príncipe">
                 </div>
                 <div class="card-content">
                     <div class="card-header">
-                        <span class="card-category">COVER ILLUSTRATION</span>
+                        <span class="card-category">ILUSTRAÇÃO DE CAPA</span>
                         <span class="card-year">2024</span>
                     </div>
                     <h3 class="card-title">O PEQUENO PRÍNCIPE</h3>
@@ -286,13 +281,11 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="animate-up in-view">
-        <h2 style="font-size: 3rem; margin-bottom: 2rem;" class="editable" data-key="footer-title"
-            contenteditable="false">VAMOS CONSTRUIR ALGO
+    <footer id="contact" class="animate-up">
+        <h2 style="font-size: 3rem; margin-bottom: 2rem;" class="editable" data-key="footer-title">VAMOS PROJETAR ALGO
             JUNTOS?</h2>
-        <p class="editable" data-key="footer-subtitle" contenteditable="false">Aberto a oportunidades em Design Gráfico,
-            Branding e Estratégia.
-        </p>
+        <p class="editable" data-key="footer-subtitle">Buscando novos desafios em Design, Branding e Desenvolvimento de
+            Produtos</p>
 
         <div class="contact-links">
             <a href="mailto:penteadomateus@yahoo.com.br" title="Email" class="contact-item">
@@ -320,20 +313,16 @@
         </div>
     </footer>
 
-    <!-- Login Modal -->
-    <div id="login-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">×</span>
-            <h2>Admin Login</h2>
-            <form id="login-form">
-                <div class="form-group">
-                    <input type="text" id="username" placeholder="Usuário" required="">
+    <!-- PDF Viewer Modal -->
+    <div id="pdf-modal" class="modal">
+        <div class="modal-content pdf-view">
+            <div class="pdf-modal-header">
+                <h3 id="pdf-title">Visualização do Projeto</h3>
+                <div class="pdf-controls">
+                    <span class="close-pdf-modal">×</span>
                 </div>
-                <div class="form-group">
-                    <input type="password" id="password" placeholder="Senha" required="">
-                </div>
-                <button type="submit" class="login-btn">Entrar</button>
-            </form>
+            </div>
+            <iframe id="pdf-frame" src=""></iframe>
         </div>
     </div>
 
