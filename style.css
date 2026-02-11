@@ -470,7 +470,7 @@ body.light-mode .tool-img-white {
 
 .edu-list li {
     margin-bottom: 2rem;
-    border-bottom: 1px solid var(--grid-line);
+    border-bottom: 0px;
     padding-bottom: 1rem;
     display: flex;
     align-items: center;
